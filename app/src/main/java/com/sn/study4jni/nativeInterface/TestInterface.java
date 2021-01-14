@@ -8,4 +8,6 @@ public class TestInterface {
     public static native String getStringFromNDK();
 
     public static native int getInt4Ndk();
+
+    public static native void studyBasic();
 }

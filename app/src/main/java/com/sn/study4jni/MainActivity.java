@@ -20,12 +20,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         String text = TestInterface.getStringFromNDK();
-        String text1 =  LogNativeInterface.logWrite();
-//        String textC = TestInterfaceC.getStringFromNDK();
-//        Log.i(TAG, "text : " + text);
-//        Log.i(TAG, "textC :" + textC);
-        ((TextView) findViewById(R.id.tv)).setText(text1);
-//        new DynamicNative().registerDynamic();
+        TestInterface.studyBasic();
+        ((TextView) findViewById(R.id.tv)).setText(text);
         registerDynamic();
         Log.e(TAG, Nlog.SYS_INFO);
     }
