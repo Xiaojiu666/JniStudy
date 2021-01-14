@@ -6,7 +6,15 @@ add_library( # Sets the name of the library.
         SHARED
         # Provides a relative path to your source file(s).
         src/main/cpp/native_lib.cpp
-        src/main/cpp/native_dynamic.cpp)
+        src/main/cpp/native_dynamic.cpp
+        src/main/cpp/native_nlog.cpp
+        )
+#add_library( # Sets the name of the library.
+#        native-nlog
+#        # Sets the library as a shared library.
+#        SHARED
+#        # Provides a relative path to your source file(s).
+#        )
 
 
 find_library( # Defines the name of the path variable that stores the
@@ -20,6 +28,5 @@ find_library( # Defines the name of the path variable that stores the
 
 target_link_libraries( # Specifies the target library.
         native-lib
-
         # Links the log library to the target library.
         ${log-lib})
